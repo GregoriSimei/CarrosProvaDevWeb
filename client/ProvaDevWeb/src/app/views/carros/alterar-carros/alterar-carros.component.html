@@ -1,0 +1,32 @@
+<div>
+    <button mat-raised-button (click)="retornar()">
+        Voltar
+    </button>
+</div>
+<div>
+    <p style="color:red">{{messagemErro}}</p>
+    <mat-form-field>
+        <mat-label>Placa</mat-label>
+        <input type="text" matInput name="placa" [(ngModel)]="carro.placa" />
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Modelo</mat-label>
+        <input type="text" matInput name="modelo" [(ngModel)]="carro.modelo" />
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Ano</mat-label>
+        <input type="number" min="1700" max="2020" matInput name="ano" [(ngModel)]="carro.ano" />
+    </mat-form-field>
+    <div>
+        <button mat-raised-button (click)="cadastrar()">
+            Adicionar
+        </button>
+    </div>
+</div>
+<div>
+    <p style="color:red">
+        Nao e possivel adicionar mais de um carro com a mesma placa
+    </p>
+</div>
